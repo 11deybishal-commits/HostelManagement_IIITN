@@ -1,53 +1,173 @@
 🏨 Hostel Complaint Management System
+=====================================
 
-A web-based platform that allows hostel residents to easily report issues such as water supply problems, electricity failures, cleanliness issues, or other maintenance concerns.
+A modern, beautifully designed web application for managing hostel complaints with real-time tracking and efficient issue resolution powered by React + Vite frontend and Node/Express backend.
 
-The system helps streamline communication between students and hostel administration, ensuring faster issue resolution and better hostel management.
+🎨 Features
+-----------
 
-🚀 Features
-📝 Raise Complaints
+✨ **Beautiful Light Theme Interface**
+- Modern gradient-based design with smooth animations
+- Bold typography for excellent readability
+- IITN logo prominently displayed
+- Fully responsive for all devices
 
-Students can report issues related to:
+📝 **Student Features**
+- Submit complaints with auto-priority detection
+- Track complaint status with unique ID
+- Update personal information
+- View category-specific issue submission
 
-Water supply
+📊 **Admin Dashboard**
+- Real-time analytics with charts
+- Filter complaints by status
+- Update complaint status with notes
+- Visual dashboards with statistics
+- Category and priority-based analytics
 
-Electricity problems
+🔐 **Security**
+- JWT-based admin authentication
+- Password hashing with bcryptjs
+- Protected API routes
+- Input validation
 
-Cleanliness issues
+🛠️ Tech Stack
+--------------
 
-Internet connectivity
+**Frontend:**
+- React 19 + Vite 7
+- Framer Motion (animations)
+- Recharts (data visualization)
+- Modern CSS3
 
-Room maintenance
+**Backend:**
+- Node.js + Express
+- MongoDB + Mongoose
+- JWT Authentication
+- CORS enabled
 
-Other hostel-related problems
+📦 Quick Start
+--------------
 
-📊 Complaint Tracking
+### Backend
+```bash
+cd backend
+npm install
+npm run dev  # Port 5000
+```
 
-Users can track the status of their complaints:
+### Frontend
+```bash
+npm install
+npm run dev  # Port 5173
+```
 
-Pending
+See **SETUP_GUIDE.md** for detailed installation instructions.
 
-In Progress
+🚀 Default Admin Credentials
+----------------------------
+- Email: admin@iiitn.ac.in
+- Password: Admin123!
 
-Resolved
+(Change these immediately in production)
 
-👨‍💼 Admin Dashboard
+📋 API Endpoints
+----------------
 
-Hostel authorities can:
+**Complaints:**
+- `POST /api/complaints` - Create complaint
+- `GET /api/complaints/complaint/:id` - Get status
+- `GET /api/complaints` - List all (admin)
+- `PUT /api/complaints/:id` - Update (admin)
 
-View all complaints
+**Admin:**
+- `POST /api/admin/login` - Login
+- `GET /api/admin/profile` - Profile (protected)
 
-Update complaint status
+🎯 Complaint Categories
+------------------------
+- ⚡ Electricity
+- 💧 Water Supply
+- 🧹 Cleaning
+- 📶 Internet
+- 🔧 Other
 
-Manage issue categories
+📊 Priority Levels
+------------------
+- 🔴 High (Urgent situations)
+- 🟡 Medium (Scheduled issues)
+- 🟢 Low (Minor issues)
 
-🔔 Real-time Updates
+💡 Key Animations
+-----------------
+- Smooth page transitions
+- Button hover effects with scaling
+- Card elevation on interaction
+- Animated statistics display
+- Floating decorative elements
+- Data chart animations
 
-Students can see updates when their complaint status changes.
+📁 Project Structure
+--------------------
+```
+hostelflow/
+├── backend/           # Node/Express API
+│   ├── models/       # MongoDB schemas
+│   ├── routes/       # API routes
+│   ├── controllers/  # Business logic
+│   └── server.js
+├── src/              # React frontend
+│   ├── components/   # React components
+│   ├── api.js       # API service
+│   └── App.jsx
+└── README.md
+```
 
-📱 Responsive Interface
+🔄 Workflow
+-----------
 
-Works smoothly on desktops, tablets, and mobile devices.
+**Student:**
+1. Home → Raise Complaint
+2. Fill details & submit
+3. Receive complaint ID
+4. Track status
+
+**Admin:**
+1. Login with credentials
+2. View dashboard
+3. Review complaints
+4. Update status & notes
+5. Track resolution
+
+🎨 Color Scheme
+---------------
+- Primary Blue: #2e5090
+- Secondary Cyan: #00b4d8
+- Accent Pink: #ff006e
+- Success Green: #28a745
+- Light Background: #f8f9ff
+
+📱 Responsive Design
+-------------------
+- Mobile: Optimized for small screens
+- Tablet: Flexible two-column layout
+- Desktop: Full feature display
+
+🔐 Security Features
+--------------------
+- JWT token-based authentication
+- Password hashing (bcryptjs)
+- CORS protection
+- Secure routes with middleware
+- Input validation
+
+📞 Support
+----------
+Contact hostel administration for access issues.
+
+---
+
+**Made with ❤️ for IITN Nagpur Hostel Management**
 
 LINK:https://hostel-management-iiitn.netlify.app/
 
